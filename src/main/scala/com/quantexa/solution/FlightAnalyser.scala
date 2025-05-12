@@ -51,7 +51,7 @@ class FlightAnalyser(spark: SparkSession) {
     flightData
       .withColumn("month", month(to_date($"date", "yyyy-MM-dd")))
       .groupBy("month")
-      .agg(count("*").as("Number of Flights"))
+      .agg(countDistinct("flightId").as("Number of Flights"))
       .orderBy("month")
       .withColumnRenamed("month", "Month")
   }

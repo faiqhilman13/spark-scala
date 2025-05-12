@@ -42,4 +42,77 @@
 ## Discovered During Work
 - Added `.gitignore` file to exclude build artifacts and other unnecessary files.
 - Implemented the solution using Spark SQL for Q3 (longest run without UK) for better readability and performance.
-- Used a self-join strategy for Q4 (passengers flying together) to avoid double-counting. 
+- Used a self-join strategy for Q4 (passengers flying together) to avoid double-counting.
+
+## Skills & Lessons Learned
+
+### 1. Big Data Processing
+- Apache Spark fundamentals and architecture
+- Distributed data processing concepts
+- Handling large datasets efficiently
+- Memory management in big data applications
+
+### 2. Scala Programming
+- Functional programming principles
+- Case classes and immutable data structures
+- Pattern matching and type safety
+- Scala's integration with Spark
+- Object-oriented programming in Scala
+
+### 3. Data Analysis Techniques
+- Complex data transformations
+- Window functions for sequential analysis
+- Join operations and optimization
+- Aggregation and grouping strategies
+- Date-based filtering and analysis
+
+### 4. Software Engineering Best Practices
+- Project structure and organization
+- Test-driven development (TDD)
+- Error handling and validation
+- Code documentation
+- Version control with Git
+
+### 5. Performance Optimization
+- Broadcast joins for small tables
+- Partition management
+- Query optimization
+- Memory vs. disk tradeoffs
+- Data skew handling
+
+### 6. Data Processing Patterns
+- ETL (Extract, Transform, Load) workflows
+- Batch processing techniques
+- Data validation and cleaning
+- Output formatting and storage
+
+### 7. Problem-Solving Skills
+- Breaking down complex problems
+- Edge case identification
+- Algorithm design for large datasets
+- Solution scalability considerations
+
+### 8. Development Tools
+- SBT build system
+- IDE usage (IntelliJ recommended)
+- Debugging tools and techniques
+- Performance monitoring (Spark UI)
+
+### 9. Testing Strategies
+- Unit test design
+- Test data creation
+- Edge case testing
+- Performance testing
+- Test documentation
+
+### 10. Documentation Skills
+- Technical documentation writing
+- API documentation
+- User guides
+- Code comments and explanations
+
+These skills form a solid foundation for:
+- Big Data Engineering roles
+- Data Analysis positions
+- Scala/Spark development
+- Software Engineering in data-intensive applications 

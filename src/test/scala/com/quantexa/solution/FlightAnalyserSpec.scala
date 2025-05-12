@@ -67,19 +67,20 @@ class FlightAnalyserSpec extends AnyFlatSpec with Matchers with BeforeAndAfterAl
   val analyser = new FlightAnalyser(spark)
   
   // Test for Question 1: Flights per month
-  "flightsPerMonth" should "count flights correctly for each month" in {
+  "flightsPerMonth" should "count distinct flights correctly for each month" in {
     val result = analyser.flightsPerMonth(testFlights)
     
-    // Expected: Jan (4), Feb (4), Mar (3), Apr (2), May (1), Jun (1)
+    // Expected: Jan (3), Feb (3), Mar (2), Apr (1), May (1), Jun (1)
+    // Note: Multiple passengers on same flight should count as 1 flight
     result.collect().length should be(6)
     
     val resultMap = result.collect().map(row => (row.getAs[Int]("Month"), row.getAs[Long]("Number of Flights"))).toMap
-    resultMap(1) should be(4) // January
-    resultMap(2) should be(4) // February
-    resultMap(3) should be(3) // March
-    resultMap(4) should be(2) // April
-    resultMap(5) should be(1) // May
-    resultMap(6) should be(1) // June
+    resultMap(1) should be(3) // January: 301, 401, 201
+    resultMap(2) should be(3) // February: 302, 402, 202
+    resultMap(3) should be(2) // March: 403, 203
+    resultMap(4) should be(1) // April: 404
+    resultMap(5) should be(1) // May: 105
+    resultMap(6) should be(1) // June: 106
   }
   
   // Test for Question 2: Frequent flyers
