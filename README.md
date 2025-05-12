@@ -33,43 +33,38 @@ This project analyzes flight and passenger data to answer several questions abou
 └── README.md               # This file
 ```
 
-## Building the Project
+## Quick Start
 
-To build the project, run:
-
+1. Clone the repository
+2. Navigate to the project root directory
+3. Run the project:
 ```bash
-sbt clean compile
+sbt run
 ```
 
-To run the tests:
+This will:
+- Compile the code
+- Process the default data files (in `data/` directory)
+- Generate results in the `output/` directory
+- Display summary results in the console
 
+## Running Tests
+
+To run the test suite:
 ```bash
 sbt test
 ```
 
-To create a fat JAR file that includes all dependencies:
+## Advanced Usage (Optional)
 
-```bash
-sbt assembly
-```
-
-## Running the Application
-
-### Using SBT
-
+If you want to use custom data files, you can run:
 ```bash
 sbt "run [flightDataPath] [passengersPath]"
 ```
 
 Where:
-- `flightDataPath` is the path to the flight data CSV file (default: `data/flightData.csv`)
-- `passengersPath` is the path to the passengers CSV file (default: `data/passengers.csv`)
-
-### Using the JAR file
-
-```bash
-java -jar target/scala-2.12/quantexa-coding-assignment-assembly-1.0.jar [flightDataPath] [passengersPath]
-```
+- `flightDataPath` is the path to your flight data CSV file (default: `data/flightData.csv`)
+- `passengersPath` is the path to your passengers CSV file (default: `data/passengers.csv`)
 
 ## Questions and Implementation Approaches
 
